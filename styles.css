@@ -1,0 +1,26 @@
+
+
+.container{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#circle{
+    border: 8px solid #f84342;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation-name: example;
+    animation-duration: 5s;
+}
+
+@keyframes example {
+    3%   {border-color: transparent transparent transparent  transparent; }
+    5%   {border-color: red transparent transparent  transparent; }
+    7%   {border-color: red transparent transparent red ; }
+    9%  {border-color: red transparent red red;}
+    10% {border-color: red red red red}
+   }
