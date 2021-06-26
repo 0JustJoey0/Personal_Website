@@ -18,7 +18,6 @@
 #header-wrapper{
     background-color: #65AFF3;
     border: var(--border-template);
-    width: 100vw; 
     min-height: 400px; 
     display: flex;
     align-items: center;
@@ -84,15 +83,87 @@ img{
 }
 
 
+/*Posts*/
+
+#image-block{
+    background-color: #65AFF3;
+    width: 250px;
+    height: 250px;
+}
+
+#date{
+    font-size: 16px;
+}
+
+#title{
+    width:250px; 
+    text-align: center;
+}
+
+#Posts{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  ". title ."
+  "left middle right"
+  "low mid high";
+  row-gap: 30px;
+}
+
+#main-title{
+    grid-area: title;
+    justify-self:center;
+
+}
+
+#art1{
+    grid-area: left;
+    justify-self:center;
+}
+
+#art2{
+    grid-area: middle;
+    justify-self:center;
+}
+
+#art3{
+    grid-area: right;
+    justify-self:center;
+}
+
+#art4{
+    grid-area: low;
+    justify-self:center;
+}
+
+#art5{
+    grid-area: mid;
+    justify-self:center;
+}
+
+#art6{
+    grid-area: high;
+    justify-self:center;
+}
+
+
+
 
 /*Footer*/
 
 footer{
     background-color: #65AFF3;
-    min-height: 50px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
 
 footer h3{
     margin-bottom: 0px;
+    font-size: 15px;
+    
 }
