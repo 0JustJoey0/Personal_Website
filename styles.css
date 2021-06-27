@@ -56,6 +56,15 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: none; 
+}
+
+@keyframes change{
+    0%{background-color: red;}
+    25%{background-color: blue;}
+    50%{background-color: green;}
+    75%{background-color: purple;}
+    100%{background-color: red;}
 }
 
 #button-wrapper2{
@@ -80,6 +89,9 @@ img{
 #button-wrapper h3{
     font-size: 20px;
     display:none;
+    background-color: white;
+    padding: 10px 10px;
+    border: 3px solid black;
 }
 
 

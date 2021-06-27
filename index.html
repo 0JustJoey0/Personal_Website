@@ -41,7 +41,7 @@
     <section>
         <div id="button-wrapper">
             <div id="button-wrapper2"> 
-                <button type="button" onclick="Function()">
+                <button type="button">
                   Click Me
                </button>
                <h3 id="button-text">I hope you have a nice day</h3>
@@ -51,43 +51,43 @@
     <section id="Posts">
       <h1 id="main-title">Articles</h1>
         <article id="art1">
-          <div id="image-block">
-          </div>
-          <h4 id="date">June 25th, 2021</h4>
-          <h2 id="title">Title</h2>
+          <img src="/Personal_Website/Photos/IMG_0934.jpg" id="image-block">
+        </img>
+          <h4 id="date">June 27th, 2021</h4>
+          <h2 id="title">Somedays</h2>
         </article>
         <article id="art2">
-          <div id="image-block">
-          </div>
+          <img src="/Personal_Website/Photos/IMG_4041.jpg" id="image-block">
+        </img>
           <h4 id="date">June 25th, 2021</h4>
-          <h2 id="title">Title</h2>
+          <h2 id="title">A New Friend</h2>
         </article>
         <article id="art3">
-          <div id="image-block">
-          </div>
-          <h4 id="date">June 25th, 2021</h4>
-          <h2 id="title">Title</h2>
+          <img src="/Personal_Website/Photos/IMG_4301-2.jpg" id="image-block">
+        </img>
+          <h4 id="date">June 20th, 2021</h4>
+          <h2 id="title">Clocking is Ticking</h2>
 
         </article>
         <article id="art4">
-          <div id="image-block">
-          </div>
-          <h4 id="date">June 25th, 2021</h4>
-          <h2 id="title">Title</h2>
+          <img src="/Personal_Website/Photos/IMG_4507.jpg" id="image-block">
+        </img>
+          <h4 id="date">June 15th, 2021</h4>
+          <h2 id="title">A Nice Sunset</h2>
 
         </article>
         <article id="art5">
-          <div id="image-block">
-          </div>
-          <h4 id="date">June 25th, 2021</h4>
-          <h2 id="title">Title</h2>
+          <img src="/Personal_Website/Photos/IMG_5130.JPG" id="image-block">
+        </img>
+          <h4 id="date">June 10th, 2021</h4>
+          <h2 id="title">My Passion for Running</h2>
 
         </article>
         <article id="art6">
-          <div id="image-block">
-          </div>
-          <h4 id="date">June 25th, 2021</h4>
-          <h2 id="title">Title</h2>
+          <img src="/Personal_Website/Photos/download.jpg" id="image-block">
+        </img>
+          <h4 id="date">June 2th, 2021</h4>
+          <h2 id="title">Funny Cat</h2>
         </article>
     </section>
 
@@ -102,9 +102,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
     
-    function Function(){
+    var timesClicked = 0;
+
+$("button").click(function() {
+    timesClicked++;
+
+    if (timesClicked>1) {
+      document.getElementById("button-text").style.display="none";
+      document.getElementById("button-wrapper").style.animation="none";
+      timesClicked = 0; 
+    } else {
       document.getElementById("button-text").style.display="initial";
+      document.getElementById("button-wrapper").style.animation="change 5s infinite";
     }
+})
       </script>
   </body>
 </html>
